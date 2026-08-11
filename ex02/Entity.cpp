@@ -5,7 +5,7 @@
 
 Entity::Entity(std::string name, int maxHp) : m_name(std::move(name)), m_maxHp(maxHp), m_currentHp(maxHp){}
 
-Entity::~Entity() = default;
+Entity::~Entity() = default; //i put here so that vtable lookup is anchored :3
 
 void Entity::takeDamage(int amount){
     if (amount <= 0) return; //Guard invariant 
